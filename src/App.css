@@ -5,6 +5,44 @@
   text-align: center;
 }
 
+.myTitle {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  color:darkcyan;
+}
+
+.gwendolyn-regular {
+  font-family: "Gwendolyn", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:midnightblue;
+}
+
+.gwendolyn-bold {
+  font-family: "Gwendolyn", cursive;
+  font-weight: 700;
+  font-size:x-large;
+  font-style: normal;
+  color:orangered;
+}
+
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style:normal; 
+  color: whitesmoke;
+}
+
+.ck_lead_in {
+  font-family: Helvetica;
+      
+  background: -webkit-repeating-linear-gradient(white, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
