@@ -135,26 +135,39 @@ html, body{
 @media (max-width: 600px) {
   .bruno-ace-sc-regular {
     flex-direction: column;
+    gap: 8px;              /* optional: tighter spacing on mobile */
+  }
+
+  .bruno-ace-sc-regular > div {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;   /* keep each name on one line */
+    word-break: normal;
+    overflow-wrap: normal;
   }
 }
 
 @media (max-width: 600px){
   .ck_lead_in{
-    color: whitesmoke;
-    font-size:x-small;
-    padding-bottom: 20px;
+    display:none;
   }
 }
 
 @media (max-width: 600px){
   .theK{
-    font-size:6em;
+    font-size:4em;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 600px){
+  .navbar-container{
+    gap:1rem;
   }
 }
 
