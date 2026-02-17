@@ -8,9 +8,21 @@ function App() {
 
   return (
     <>
-      <div>
-        <h5 className="ck_lead_in">welcome to the portfolio of</h5>
-        <h1 className="mea-culpa-regular">Chad Klunk</h1>        
+      <div className="navbar">
+        <div className="navbar-container">
+        <div><a href='/'>home</a></div>
+        <div><a href='/'>about</a></div>
+        <div><a href='/'>portfolio</a></div>
+        <div><a href='/'>pricing</a></div>
+        </div>
+      </div>
+      <div className="page">
+        <div className="ck_lead_in">welcome to the portfolio of</div>
+        <div className="bruno-ace-sc-regular"><div>C H A D</div> <div>K L U N K</div> </div>      
+        <p/>
+        <div>            
+            <div className="theK">K</div>
+        </div>  
       </div>
       
     </>

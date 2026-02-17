@@ -1,8 +1,16 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width:100%;/*max-width: 1280px;*/
+  margin: 0 auto; 
   text-align: center;
+}
+
+.page {
+  
+  max-width: 1280px;
+  margin: 0 auto;      /* centers horizontally */
+  text-align: center;  /* if you still want centered text */
+  padding: 10rem;
+  overflow-y:hidden;
 }
 
 .myTitle {
@@ -20,10 +28,9 @@
 
 .gwendolyn-bold {
   font-family: "Gwendolyn", cursive;
-  font-weight: 700;
-  font-size:x-large;
+  font-weight: 700;  
   font-style: normal;
-  color:orangered;
+  color:whitesmoke;
 }
 
 .mea-culpa-regular {
@@ -33,14 +40,74 @@
   color: whitesmoke;
 }
 
-.ck_lead_in {
-  font-family: Helvetica;
-      
-  background: -webkit-repeating-linear-gradient(white, grey);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  font-size: clamp(10px, 4vw, 48px);
 }
 
+
+.ck_lead_in {
+  font-family: "Bruno Ace SC", sans-serif;
+  background: linear-gradient(
+    100deg,
+    white,
+    #213547
+  );
+  font-size: small;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.navbar {
+  width: 100%;
+  background:black;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;     /* force horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  padding: 1rem 0;
+
+  font-size:small;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+.theK{
+  font-size:12em;
+  font-family: "Mea Culpa", cursive;
+  background: linear-gradient(
+    0deg,
+    /*
+    yellow,
+    orangered
+    */
+    yellow, orangered
+  );
+ 
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 
 .logo {
@@ -62,6 +129,26 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .bruno-ace-sc-regular {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px){
+  .ck_lead_in{
+    color: whitesmoke;
+    font-size:x-small;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px){
+  .theK{
+    font-size:6em;
   }
 }
 
