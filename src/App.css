@@ -1,16 +1,46 @@
+/* Root container */
 #root {
-  width:100%;/*max-width: 1280px;*/
-  margin: 0 auto; 
+  width: 100%;
+  margin: 0;
+}
+
+/* Main layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #213547;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  padding: 1rem 0;
+  font-size: small;
+}
+
+/* Main page area */
+.page {
+  flex: 1;
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
+
+  padding: clamp(40px, 8vw, 120px);
 }
 
-.mea-culpa-regular {
-  font-family: "Mea Culpa", cursive;
-  font-weight: 400;
-  font-style:normal; 
-  color: whitesmoke;
-}
-
+/* Name styling */
 .bruno-ace-sc-regular {
   font-family: "Bruno Ace SC", sans-serif;
   display: flex;
@@ -18,83 +48,58 @@
   align-items: center;
   gap: 20px;
 
-  font-size: clamp(10px, 4vw, 48px);
+  font-size: clamp(28px, 4vw, 48px);
 }
 
-
+/* Lead-in text */
 .ck_lead_in {
   font-family: "Bruno Ace SC", sans-serif;
-  background: linear-gradient(
-    100deg,
-    white,
-    #213547
-  );
-  font-size: small;
+  background: linear-gradient(100deg, white, #213547);
+
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.navbar {
-  width: 100%;
-  background:#213547;
-}
-
-.navbar-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;     /* force horizontal */
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  padding: 1rem 0;
-  font-size:small;
-}
-
-html, body{
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
-}
-
-
-.theK{
-  font-size:12em;
+/* Decorative K */
+.theK {
+  font-size: clamp(60px, 10vw, 160px);
   font-family: "Mea Culpa", cursive;
-  background: linear-gradient(
-    90deg,    
-   yellow, orangered
-    /*blue, lime*/
-  ); 
 
+  background: linear-gradient(0deg, yellow, orangered);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  line-height: 1;
+  margin-top: 20px;
 }
 
+/* Footer */
+.footer {
+  height: 60px;
+  width: 100%;
+  background-color: #213547;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------ */
+/* 📱 Mobile Layout */
+/* ------------------ */
 @media (max-width: 600px) {
-  /* Keep the app stacked top -> content -> footer */
-  .app {
-    min-height: 100vh;
-    justify-content: flex-start;
-    align-items: stretch; /* important: don't center the whole app */
+
+  .navbar-container {
+    gap: 1.5rem;
   }
 
-  /* Make the main content area feel balanced */
   .page {
-    flex: 1;
-    /*padding: clamp(16px, 6vw, 28px);*/
-    padding: 24px 16px;  /* key fix */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* centers content within the page area */
-    /* background-color: red; */ /* remove once testing is done */
-
-
+    padding: 24px 16px;
   }
 
   .bruno-ace-sc-regular {
@@ -108,65 +113,15 @@ html, body{
     white-space: nowrap;
   }
 
-  .navbar-container {
-    gap: 1rem;
-    padding: 0.75rem 0;
-  }
-
-  .theK {
-    font-size: clamp(30px, 18vw, 96px);
-    line-height: 1; /* keeps it from pushing weird vertical space */
-  }
-
   .ck_lead_in {
     display: none;
   }
 
+  .theK {
+    font-size: clamp(48px, 18vw, 96px);
+  }
+
   .footer {
-    height: 44px;          /* nice “tap target” size */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 44px;
   }
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* make the whole app a full-height column layout */
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.page {
-  /*background-color: yellow;*/
-  max-width: 1280px;
-  margin: 0 auto;      
-  text-align: center;  
-  padding-top: 13rem;
-  overflow-y:hidden;
-  
-  flex:1;
-}
-
-.footer {
- min-height:200px;
-  background-color: #213547;
-  width: 100%;
 }
