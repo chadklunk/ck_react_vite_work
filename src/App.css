@@ -85,13 +85,16 @@ html, body{
   /* Make the main content area feel balanced */
   .page {
     flex: 1;
-    padding: clamp(16px, 6vw, 28px);
+    /*padding: clamp(16px, 6vw, 28px);*/
+    padding: 24px 16px;  /* key fix */
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; /* centers content within the page area */
     /* background-color: red; */ /* remove once testing is done */
+
+
   }
 
   .bruno-ace-sc-regular {
