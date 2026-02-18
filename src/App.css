@@ -4,35 +4,6 @@
   text-align: center;
 }
 
-.page {
-  
-  max-width: 1280px;
-  margin: 0 auto;      /* centers horizontally */
-  text-align: center;  /* if you still want centered text */
-  padding: 10rem;
-  overflow-y:hidden;
-}
-
-.myTitle {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: x-large;
-  color:darkcyan;
-}
-
-.gwendolyn-regular {
-  font-family: "Gwendolyn", cursive;
-  font-weight: 400;
-  font-style: normal;
-  color:midnightblue;
-}
-
-.gwendolyn-bold {
-  font-family: "Gwendolyn", cursive;
-  font-weight: 700;  
-  font-style: normal;
-  color:whitesmoke;
-}
-
 .mea-culpa-regular {
   font-family: "Mea Culpa", cursive;
   font-weight: 400;
@@ -59,7 +30,6 @@
     #213547
   );
   font-size: small;
-
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -67,21 +37,18 @@
 
 .navbar {
   width: 100%;
-  background:black;
+  background:#213547;
 }
 
 .navbar-container {
   max-width: 1280px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: row;     /* force horizontal */
   justify-content: center;
   align-items: center;
   gap: 4rem;
-
   padding: 1rem 0;
-
   font-size:small;
 }
 
@@ -91,18 +58,15 @@ html, body{
   overflow-x:hidden;
 }
 
+
 .theK{
   font-size:12em;
   font-family: "Mea Culpa", cursive;
   background: linear-gradient(
-    0deg,
-    /*
-    yellow,
-    orangered
-    */
-    yellow, orangered
-  );
- 
+    90deg,    
+   yellow, orangered
+    /*blue, lime*/
+  ); 
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -110,54 +74,60 @@ html, body{
 }
 
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (max-width: 600px) {
+  /* Keep the app stacked top -> content -> footer */
+  .app {
+    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: stretch; /* important: don't center the whole app */
+  }
+
+  /* Make the main content area feel balanced */
+  .page {
+    flex: 1;
+    padding: clamp(16px, 6vw, 28px);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centers content within the page area */
+    /* background-color: red; */ /* remove once testing is done */
+  }
+
   .bruno-ace-sc-regular {
     flex-direction: column;
-    gap: 8px;              /* optional: tighter spacing on mobile */
+    gap: 8px;
   }
 
   .bruno-ace-sc-regular > div {
     width: 100%;
     text-align: center;
-    white-space: nowrap;   /* keep each name on one line */
-    word-break: normal;
-    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+
+  .navbar-container {
+    gap: 1rem;
+    padding: 0.75rem 0;
+  }
+
+  .theK {
+    font-size: clamp(30px, 18vw, 96px);
+    line-height: 1; /* keeps it from pushing weird vertical space */
+  }
+
+  .ck_lead_in {
+    display: none;
+  }
+
+  .footer {
+    height: 44px;          /* nice “tap target” size */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-@media (max-width: 600px){
-  .ck_lead_in{
-    display:none;
-  }
-}
-
-@media (max-width: 600px){
-  .theK{
-    font-size:4em;
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
@@ -165,11 +135,6 @@ html, body{
   }
 }
 
-@media (max-width: 600px){
-  .navbar-container{
-    gap:1rem;
-  }
-}
 
 .card {
   padding: 2em;
@@ -177,4 +142,28 @@ html, body{
 
 .read-the-docs {
   color: #888;
+}
+
+/* make the whole app a full-height column layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  /*background-color: yellow;*/
+  max-width: 1280px;
+  margin: 0 auto;      
+  text-align: center;  
+  padding-top: 13rem;
+  overflow-y:hidden;
+  
+  flex:1;
+}
+
+.footer {
+ min-height:200px;
+  background-color: #213547;
+  width: 100%;
 }

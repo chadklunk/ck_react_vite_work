@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+    <div className="app">
       <div className="navbar">
         <div className="navbar-container">
         <div><a href='/'>home</a></div>
@@ -23,7 +24,10 @@ function App() {
         <div>            
             <div className="theK">K</div>
         </div>  
-      </div>
+      </div>     
+      <footer className="footer">Footer content</footer>
+    </div>  
+      {/*<footer style={{height:"10vh", background: "linear-gradient(to right, yellow, orangered)",}}>Footer content</footer>*/}
       
     </>
   )
